@@ -1,10 +1,10 @@
-1. ���յ��켣 ���� ,�ȴ���redis ,��ÿ�����ϴ�redis �л�ȡ����ת�浽���ݿ��У�����յ��� redis ������켣��redis �ж�ȡ
-2. Ŀǰ�������ӻ����ֻ�ܲ鿴������ǰλ�ã����ܿ����켣������websocket ����+echart + baidu��ͼ����
-3. �켣������ֻ����imei , ҪתΪ���ƺţ������ն˻�����ϢҲ�ŵ�redis��
+﻿1. 接收到轨迹 数据 ,先存入redis ,，每天晚上从redis 中获取数据转存到数据库中，并清空当天 redis ，当天轨迹从redis 中读取
+2. 目前车辆可视化监控只能查看车辆当前位置，不能看到轨迹，采用websocket 推送+echart + baidu地图方案
+3. 轨迹数据中只含有imei , 要转为车牌号，车辆终端基础信息也放到redis中
 
-1.����web��ȫ�����ͷ���
-2.�����java ʾ��
-3.springBoot ΢����ܹ�
+1.常见web安全攻击和防范
+2.爬虫和java 示例
+3.springBoot 微服务架构
 4.springBoot + redis
 5.spring data jpa
 6.springBoot + mybatis
@@ -16,27 +16,27 @@
 11.springCloud
 
 
-Spring Cloud Config�����ù����������߰���������������÷ŵ�Զ�̷�������Ŀǰ֧�ֱ��ش洢��Git�Լ�Subversion��
-Spring Cloud Bus���¼�����Ϣ���ߣ������ڼ�Ⱥ�����磬���ñ仯�¼����д���״̬�仯������Spring Cloud Config����ʵ���Ȳ���
-Spring Cloud Netflix����Զ���Netflix����ṩ�Ŀ������߰������а���Eureka��Hystrix��Zuul��Archaius�ȡ�
+Spring Cloud Config：配置管理开发工具包，可以让你把配置放到远程服务器，目前支持本地存储、Git以及Subversion。
+Spring Cloud Bus：事件、消息总线，用于在集群（例如，配置变化事件）中传播状态变化，可与Spring Cloud Config联合实现热部署。
+Spring Cloud Netflix：针对多种Netflix组件提供的开发工具包，其中包括Eureka、Hystrix、Zuul、Archaius等。
 
-  Netflix Eureka���ƶ˸��ؾ��⣬һ������ REST �ķ������ڶ�λ������ʵ���ƶ˵ĸ��ؾ�����м��������Ĺ���ת��
-    Netflix Ribbon:  �ͻ��˸��ؾ���
-  Netflix Hystrix���ݴ��������ߣ�ּ��ͨ�����Ʒ���͵�������Ľڵ�,�Ӷ����ӳٺ͹����ṩ��ǿ����ݴ�������
-  Netflix Zuul����Ե���񹤾ߣ����ṩ��̬·�ɣ���أ����ԣ���ȫ�ȵı�Ե����
-  Netflix Archaius�����ù���API������һϵ�����ù���API���ṩ��̬���ͻ����ԡ��̰߳�ȫ���ò�������ѯ��ܡ��ص����Ƶȹ��ܡ�
+  Netflix Eureka：云端负载均衡，一个基于 REST 的服务，用于定位服务，以实现云端的负载均衡和中间层服务器的故障转移
+    Netflix Ribbon:  客户端负载均衡
+  Netflix Hystrix：容错管理工具，旨在通过控制服务和第三方库的节点,从而对延迟和故障提供更强大的容错能力。
+  Netflix Zuul：边缘服务工具，是提供动态路由，监控，弹性，安全等的边缘服务。
+  Netflix Archaius：配置管理API，包含一系列配置管理API，提供动态类型化属性、线程安全配置操作、轮询框架、回调机制等功能。
 
-Spring Cloud for Cloud Foundry��ͨ��Oauth2Э��󶨷���CloudFoundry��CloudFoundry��VMware�Ƴ��Ŀ�ԴPaaS��ƽ̨��
-Spring Cloud Sleuth����־�ռ����߰�����װ��Dapper,Zipkin��HTrace������
-Spring Cloud Data Flow�������ݲ������ߣ�ͨ�������з�ʽ������������
-Spring Cloud Security����ȫ���߰���Ϊ���Ӧ�ó������Ӱ�ȫ���ƣ���Ҫ��ָOAuth2��
-Spring Cloud Consul����װ��Consul������consul��һ�������������ù��ߣ���Docker���������޷켯�ɡ�
-Spring Cloud Zookeeper������Zookeeper�Ĺ��߰�������ʹ��zookeeper��ʽ�ķ���ע��ͷ��֡�
-Spring Cloud Stream����������������������װ����Redis,Rabbit��Kafka�ȷ��ͽ�����Ϣ��
-Spring Cloud CLI������ Spring Boot CLI�����������������з�ʽ���ٽ����������ʱ����������ʦ�������վ�����
+Spring Cloud for Cloud Foundry：通过Oauth2协议绑定服务到CloudFoundry，CloudFoundry是VMware推出的开源PaaS云平台。
+Spring Cloud Sleuth：日志收集工具包，封装了Dapper,Zipkin和HTrace操作。
+Spring Cloud Data Flow：大数据操作工具，通过命令行方式操作数据流。
+Spring Cloud Security：安全工具包，为你的应用程序添加安全控制，主要是指OAuth2。
+Spring Cloud Consul：封装了Consul操作，consul是一个服务发现与配置工具，与Docker容器可以无缝集成。
+Spring Cloud Zookeeper：操作Zookeeper的工具包，用于使用zookeeper方式的服务注册和发现。
+Spring Cloud Stream：数据流操作开发包，封装了与Redis,Rabbit、Kafka等发送接收消息。
+Spring Cloud CLI：基于 Spring Boot CLI，可以让你以命令行方式快速建立云组件。时代峻峰哈会计师东方航空静安寺
 
---��������
+--隐藏数据
 update form_common_info set status='T' where status='A' and form_type_code = 'NewStaffInduction' and link_code = 'End' and mod_time < to_date('2018-12','yyyy-mm');
 
---�ָ�
+--恢复
 update form_common_info set status='A' where status='T' and form_type_code = 'NewStaffInduction' and link_code = 'End' and mod_time < to_date('2018-12','yyyy-mm');

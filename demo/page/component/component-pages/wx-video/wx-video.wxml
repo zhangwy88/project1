@@ -1,0 +1,18 @@
+<view class="page">
+    <view class="page__hd">
+        <text class="page__title" bingtap="continuePlay">video</text>
+        <text class="page__desc">视频</text>
+    </view>
+    <view class="page__bd">
+        <view class="section tc">
+            <video  id="myVideo"  bindended="continuePlay" initial-time="4" src="{{videosrc}}"  binderror="videoErrorCallback"></video>
+         <!--   <video  id="myVideo1"  src="http://1257627524.vod2.myqcloud.com/1a9eb630vodtransgzp1257627524/aa6f71d35285890782080274676/v.f20.mp4"  binderror="videoErrorCallback"></video> -->
+        </view>
+        <view class="section tc">
+            <video src="{{src}}"></video>
+            <view class="btn-area">
+                <button bindtap="bindButtonTap">获取视频</button>
+            </view>
+        </view>
+    </view>
+</view>
