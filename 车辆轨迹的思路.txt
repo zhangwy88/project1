@@ -33,7 +33,7 @@ Spring Cloud Security：安全工具包，为你的应用程序添加安全控制，主要是指OAuth2。
 Spring Cloud Consul：封装了Consul操作，consul是一个服务发现与配置工具，与Docker容器可以无缝集成。
 Spring Cloud Zookeeper：操作Zookeeper的工具包，用于使用zookeeper方式的服务注册和发现。
 Spring Cloud Stream：数据流操作开发包，封装了与Redis,Rabbit、Kafka等发送接收消息。
-Spring Cloud CLI：基于 Spring Boot CLI，可以让你以命令行方式快速建立云组件。
+Spring Cloud CLI：基于 Spring Boot CLI，可以让你以命令行方式快速建立云组件。时代峻峰哈会计师东方航空静安寺
 
 --隐藏数据
 update form_common_info set status='T' where status='A' and form_type_code = 'NewStaffInduction' and link_code = 'End' and mod_time < to_date('2018-12','yyyy-mm');
